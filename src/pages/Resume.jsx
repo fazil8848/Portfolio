@@ -1,33 +1,34 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import { AiOutlineDownload } from "react-icons/ai";
 
 import Particle from "../components/Particle";
-import pdf from "../assets/fazil.pdf";
-
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
+
 pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-const resumeLink = `https://raw.githubusercontent.com/19sajib/portfolio/main/src/assets/sajib.pdf`;
+const resumeLink = `https://raw.githubusercontent.com/fazil8848/Portfolio/main/src/assets/fazil.pdf`;
 
 const Resume = () => {
-  const [width, setWidth] = useState(1200);
+  const [numPages, setNumPages] = useState(null);
 
   useEffect(() => {
-    setWidth(window.innerWidth);
+    pdfjs
+      .getDocument(resumeLink)
+      .promise.then((pdf) => setNumPages(pdf.numPages));
   }, []);
 
   return (
     <div>
       <Container fluid className="resume-section">
         <Particle />
-        <Row style={{ justifyContent: "center", position: "relative" }}>
+        <Row style={{ justifyContent: "center", marginBottom: "20px" }}>
           <Button
             variant="primary"
-            href={pdf}
+            href={resumeLink}
             target="_blank"
             style={{ maxWidth: "250px" }}
           >
@@ -37,21 +38,31 @@ const Resume = () => {
         </Row>
 
         <Row className="resume">
-          <Document file={resumeLink} className="d-flex justify-content-center">
-            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
-          </Document>
-        </Row>
-
-        <Row style={{ justifyContent: "center", position: "relative" }}>
-          <Button
-            variant="primary"
-            href={pdf}
-            target="_blank"
-            style={{ maxWidth: "250px" }}
-          >
-            <AiOutlineDownload />
-            &nbsp;Download Resume
-          </Button>
+          <Col xs={12} md={12} className="mb-4">
+            <Document
+              file={resumeLink}
+              className="d-flex justify-content-center"
+            >
+              {" "}
+              {[...Array(Math.ceil(numPages / 2))].map((_, index) => (
+                <Page key={`page_${index + 1}`} pageNumber={index + 1} />
+              ))}
+            </Document>
+          </Col>
+          <Col xs={12} md={12} className="mb-4">
+            <Document
+              file={resumeLink}
+              className="d-flex justify-content-center"
+            >
+              {" "}
+              {[...Array(Math.floor(numPages / 2))].map((_, index) => (
+                <Page
+                  key={`page_${index + Math.ceil(numPages / 2)}`}
+                  pageNumber={index + Math.ceil(numPages / 2) + 1}
+                />
+              ))}
+            </Document>
+          </Col>
         </Row>
       </Container>
     </div>
