@@ -6,6 +6,7 @@ import {
   SiSolidity,
   SiRedux,
   SiMongodb,
+  SiExpress,
   SiHtml5,
   SiChakraui,
   SiCss3,
@@ -27,6 +28,9 @@ const Techstack = () => {
       </Col>
       <Col xs={4} md={2} className="tech-icons" title="Node.js">
         <DiNodejs />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons" title="Express.js">
+        <SiExpress />
       </Col>
       <Col xs={4} md={2} className="tech-icons" title="React">
         <DiReact />
