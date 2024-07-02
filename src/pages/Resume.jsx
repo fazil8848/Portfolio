@@ -28,7 +28,7 @@ const Resume = () => {
         <Row style={{ justifyContent: "center", marginBottom: "20px" }}>
           <Button
             variant="primary"
-            href={resumeLink}
+            onClick={resumeLink}
             target="_blank"
             style={{ maxWidth: "250px" }}
           >
