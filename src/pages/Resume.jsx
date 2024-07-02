@@ -30,7 +30,7 @@ const Resume = () => {
             variant="primary"
             onClick={resumeLink}
             target="_blank"
-            style={{ maxWidth: "250px" }}
+            style={{ maxWidth: "250px", zIndex: 50 }}
           >
             <AiOutlineDownload />
             &nbsp;Download Resume
