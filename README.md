@@ -1,4 +1,4 @@
-# JS Portfolio Website
+# REACT.JS Portfolio Website
 
 [🔗Live Demo🔗](portfolio-fazil1.vercel.app/)
 
