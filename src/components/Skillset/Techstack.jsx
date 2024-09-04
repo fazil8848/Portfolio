@@ -21,7 +21,7 @@ import {
   SiMongoose,
   SiTypescript,
 } from "react-icons/si";
-import { TbBrandNextjs, TbBrandTailwind } from "react-icons/tb";
+import { TbBinaryTree, TbBrandNextjs, TbBrandTailwind } from "react-icons/tb";
 import { LiaCss3 } from "react-icons/lia";
 
 const Techstack = () => {
@@ -46,7 +46,8 @@ const Techstack = () => {
         <SiExpress />
       </Col>
       <Col xs={4} md={2} className="tech-icons" title="Data structure algorithm">
-        DSA
+        {/* DSA */}
+        <TbBinaryTree />
       </Col>
       <Col xs={4} md={2} className="tech-icons" title="React">
         <DiReact />
