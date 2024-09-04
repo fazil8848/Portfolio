@@ -8,25 +8,19 @@ import {
   DiGit,
 } from "react-icons/di";
 import {
-  SiGraphql,
-  SiSolidity,
   SiRedux,
   SiMongodb,
   SiExpress,
   SiHtml5,
   SiChakraui,
-  SiCss3,
   SiBootstrap,
   SiFirebase,
   SiGithub,
-  SiAmazonaws,
-  SiDigitalocean,
   SiPostgresql,
   SiMysql,
   SiMongoose,
   SiTypescript,
 } from "react-icons/si";
-// import { BiSolidCoinStack } from "react-icons/bi";
 import { TbBrandNextjs, TbBrandTailwind } from "react-icons/tb";
 import { LiaCss3 } from "react-icons/lia";
 
