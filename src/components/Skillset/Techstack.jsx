@@ -26,6 +26,7 @@ import {
   SiMongoose,
   SiTypescript,
 } from "react-icons/si";
+// import { BiSolidCoinStack } from "react-icons/bi";
 import { TbBrandNextjs, TbBrandTailwind } from "react-icons/tb";
 import { LiaCss3 } from "react-icons/lia";
 
@@ -56,6 +57,7 @@ const Techstack = () => {
         className="tech-icons"
         title="Data structure algorithm"
       >
+        {/* <BiSolidCoinStack /> */}
         DSA
       </Col>
       <Col xs={4} md={2} className="tech-icons" title="React">
