@@ -51,13 +51,7 @@ const Techstack = () => {
       <Col xs={4} md={2} className="tech-icons" title="Express.js">
         <SiExpress />
       </Col>
-      <Col
-        xs={4}
-        md={2}
-        className="tech-icons"
-        title="Data structure algorithm"
-      >
-        {/* <BiSolidCoinStack /> */}
+      <Col xs={4} md={2} className="tech-icons" title="Data structure algorithm">
         DSA
       </Col>
       <Col xs={4} md={2} className="tech-icons" title="React">
