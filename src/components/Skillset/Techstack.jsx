@@ -24,8 +24,9 @@ import {
   SiPostgresql,
   SiMysql,
   SiMongoose,
+  SiTypescript,
 } from "react-icons/si";
-import { TbBrandTailwind } from "react-icons/tb";
+import { TbBrandNextjs, TbBrandTailwind } from "react-icons/tb";
 import { LiaCss3 } from "react-icons/lia";
 
 const Techstack = () => {
@@ -40,6 +41,9 @@ const Techstack = () => {
       <Col xs={4} md={2} className="tech-icons" title="JavaScript">
         <DiJavascript1 />
       </Col>
+      <Col xs={4} md={2} className="tech-icons" title="TypeScript">
+        <SiTypescript />
+      </Col>
       <Col xs={4} md={2} className="tech-icons" title="Node.js">
         <DiNodejs />
       </Col>
@@ -49,10 +53,10 @@ const Techstack = () => {
       <Col
         xs={4}
         md={2}
-        className="tech-texts"
+        className="tech-icons"
         title="Data structure algorithm"
       >
-        {/* <SiExpress /> */} <p style={{ marginTop: "1rem" }}>DSA</p>
+        DSA
       </Col>
       <Col xs={4} md={2} className="tech-icons" title="React">
         <DiReact />
@@ -78,12 +82,9 @@ const Techstack = () => {
       <Col xs={4} md={2} className="tech-icons" title="Bootstrap">
         <SiBootstrap />
       </Col>
-      {/* <Col xs={4} md={2} className="tech-icons" title="GraphQL">
-        <SiGraphql />
+      <Col xs={4} md={2} className="tech-icons" title="NEXT.JS">
+        <TbBrandNextjs />
       </Col>
-      <Col xs={4} md={2} className="tech-icons" title="Solidity">
-        <SiSolidity />
-      </Col> */}
       <Col xs={4} md={2} className="tech-icons" title="Tailwind Css">
         <TbBrandTailwind />
       </Col>
