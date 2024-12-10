@@ -36,7 +36,7 @@ const Projects = () => {
               Google authentication, PayPal for payments, Socket.io for chat between users and owners, and video calls for virtual tours. 
               Real-time notifications enhance user engagement."
               ghLink={`${githubLink}/Dream-Home-Property-Rental`}
-              demoLink="https://walkwise.shop"
+              demoLink="https://dreamhome.conqod.site"
             />
           </Col>
           <Col md={4} className="project-card">
@@ -50,7 +50,7 @@ const Projects = () => {
               options for order data in PDF and Excel formats, along with image upload using Multer. Responsive design ensures accessibility across 
               devices, while features like Easyinvoice facilitate convenient order invoicing."
               ghLink={`${githubLink}/walkwise-ecommerce`}
-              demoLink="https://ecommerce.walkwise.shop"
+              demoLink="https://walkwise.conqod.site"
             />
           </Col>
 
