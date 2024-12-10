@@ -7,6 +7,7 @@ import {
   DiNodejs,
   DiGit,
 } from "react-icons/di";
+import { FaGripHorizontal } from "react-icons/fa";
 import {
   SiRedux,
   SiMongodb,
@@ -20,6 +21,7 @@ import {
   SiMysql,
   SiMongoose,
   SiTypescript,
+  SiRabbitmq,
 } from "react-icons/si";
 import { TbBinaryTree, TbBrandNextjs, TbBrandTailwind } from "react-icons/tb";
 import { LiaCss3 } from "react-icons/lia";
@@ -45,7 +47,12 @@ const Techstack = () => {
       <Col xs={4} md={2} className="tech-icons" title="Express.js">
         <SiExpress />
       </Col>
-      <Col xs={4} md={2} className="tech-icons" title="Data structure algorithm">
+      <Col
+        xs={4}
+        md={2}
+        className="tech-icons"
+        title="Data structure algorithm"
+      >
         {/* DSA */}
         <TbBinaryTree />
       </Col>
@@ -90,6 +97,12 @@ const Techstack = () => {
       </Col>
       <Col xs={4} md={2} className="tech-icons" title="Responsive Design">
         <DiResponsive size={120} />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons" title="Rabbit MQ">
+        <SiRabbitmq />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons" title="Microservices">
+        <FaGripHorizontal />
       </Col>
     </Row>
   );
